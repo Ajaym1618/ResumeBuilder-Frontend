@@ -17,7 +17,7 @@ const Languages = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/SignUpData/${user?._id}`);
+        const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
         const userData = response.data;
         if (userData && userData.languages) {
           setLanguages({ language: userData.languages });
@@ -58,7 +58,7 @@ const Languages = () => {
       }));
   
       // Make a DELETE request to the server
-      await axios.delete(`http://localhost:3000/SignUpData/language/${user._id}/${index}`);
+      await axios.delete(`https://swiftresume-backend.onrender.com/SignUpData/language/${user._id}/${index}`);
   
       // Set success state
       setSaveSuccess(true);
@@ -74,14 +74,14 @@ const Languages = () => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:3000/SignUpData/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
       const userData = response.data;
       const updatedUserData = {
         ...userData,
         languages: languages.language,
       };
 
-      await axios.put(`http://localhost:3000/SignUpData/language/${user._id}`, updatedUserData);
+      await axios.put(`https://swiftresume-backend.onrender.com/SignUpData/language/${user._id}`, updatedUserData);
       setSaveSuccess(true); // Set success message state to true
       setTimeout(() => {
         setSaveSuccess(false); // Hide success message after a delay
