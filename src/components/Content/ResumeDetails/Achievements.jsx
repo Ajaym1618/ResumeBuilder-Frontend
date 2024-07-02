@@ -26,7 +26,7 @@ const Achievements = () => {
   const getData = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/SignUpData/${user?._id}`
+        `https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`
       );
       const userData = res.data;
       if (userData && userData.achievements) {
@@ -74,7 +74,7 @@ const Achievements = () => {
       setDetails(updatedAchievements);
 
       // Make a DELETE request to the server
-      await axios.delete(`http://localhost:3000/SignUpData/achievement/${user._id}/${index}`);
+      await axios.delete(`https://swiftresume-backend.onrender.com/SignUpData/achievement/${user._id}/${index}`);
 
       // Set success state
       setSaveSuccess(true);
@@ -91,7 +91,7 @@ const Achievements = () => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:3000/SignUpData/${user._id}`
+        `https://swiftresume-backend.onrender.com/SignUpData/${user._id}`
       );
       const userData = response.data;
 
@@ -101,7 +101,7 @@ const Achievements = () => {
       };
 
       await axios.put(
-        `http://localhost:3000/SignUpData/achievement/${user._id}`,
+        `https://swiftresume-backend.onrender.com/SignUpData/achievement/${user._id}`,
         updateAchievements
       );
       setSaveSuccess(true);
