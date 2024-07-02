@@ -16,7 +16,7 @@ const Skills = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/SignUpData/${user?._id}`);
+      const res = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
       const userData = res.data;
       if (userData && userData.skills) {
         setDetails({ ...details, skills: userData.skills });
@@ -55,7 +55,7 @@ const Skills = () => {
       setDetails({ skills: updatedSkills });
 
       // Make a DELETE request to the server
-      await axios.delete(`http://localhost:3000/SignUpData/skill/${user._id}/${index}`);
+      await axios.delete(`https://swiftresume-backend.onrender.com/SignUpData/skill/${user._id}/${index}`);
 
       // Set success state
       setSaveSuccess(true);
@@ -72,7 +72,7 @@ const Skills = () => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:3000/SignUpData/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
       const userData = response.data;
 
       const updateSkills = {
@@ -80,7 +80,7 @@ const Skills = () => {
         skills: details.skills,
       };
 
-      await axios.put(`http://localhost:3000/SignUpData/skill/${user._id}`, updateSkills);
+      await axios.put(`https://swiftresume-backend.onrender.com/SignUpData/skill/${user._id}`, updateSkills);
       setSaveSuccess(true);
       setTimeout(() => {
         setSaveSuccess(false);
