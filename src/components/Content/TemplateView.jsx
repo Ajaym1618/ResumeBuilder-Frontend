@@ -74,7 +74,7 @@ const TemplateView = () => {
             {[...templates, ...templates.slice(0, 3)].map((template, i) => (
               <div
                 key={i}
-                className="w-[25%] h-full flex-shrink-0 relative rounded-md hover:scale-95 transition-transform duration-150 max-[426px]:w-[50%] max-[768px]:w-[35%] max-[376px]:w-[80%]"
+                className="w-[25%] h-full flex-shrink-0 relative rounded-md hover:scale-95 transition-transform duration-150 max-[426px]:w-[50%] max-[768px]:w-[35%] max-[376px]:w-[100%]"
                 onMouseEnter={() => handleMouseEnter(template)}
                 onMouseLeave={handleMouseLeave}
               >
