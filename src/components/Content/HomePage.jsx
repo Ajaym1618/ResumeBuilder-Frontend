@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <div className="w-screen h-[85vh] bg-[#100f0f] flex text-white max-[375px]:h-[70vh] max-[426px]:flex max-[426px]:flex-col-reverse">
+      <div className="w-screen h-[85vh] bg-[#100f0f] flex text-white max-[375px]:h-[75vh] max-[426px]:flex max-[426px]:flex-col-reverse">
         <div className="w-[50%] flex items-center justify-center max-[768px]:w-full">
           <img
             src={HI}
@@ -21,7 +21,7 @@ const HomePage = () => {
           />
         </div>
         <div className="w-[50%] h-full flex justify-center items-start flex-col max-[768px]:w-full max-[426px]:w-[100%] max-[426px]:items-center max-[426px]:justify-start max-[426px]:text-center">
-          <h1 className="text-[48px] font-medium leading-[60px] w-[70%] mb-[40px] max-[768px]:text-[32px] max-[768px]:mb-[20px] max-[768px]:leading-[35px] max-[426px]:w-[100%] max-[426px]:text-[24px] max-[426px]:leading-[0px] max-[375px]:text-[22px]">
+          <h1 className="text-[48px] font-medium leading-[60px] w-[70%] mb-[40px] max-[768px]:text-[32px] max-[768px]:mb-[20px] max-[768px]:leading-[35px] max-[426px]:w-[100%] max-[426px]:text-[24px] max-[426px]:leading-[0px] max-[375px]:text-[18px]">
             The Best Online Resume Builder
           </h1>
           <p className="text-[24px] leading-[36px] w-[90%] mb-[40px] max-[768px]:text-[15px] max-[768px]:mb-[30px] max-[768px]:leading-[20px] max-[426px]:w-[100%] max-[426px]:text-[14px]">
