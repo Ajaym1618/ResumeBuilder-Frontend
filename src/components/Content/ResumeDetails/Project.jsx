@@ -17,7 +17,7 @@ const Project = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/SignUpData/${user?._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
       const userData = response.data;
       if (userData && Array.isArray(userData.projects)) {
         setProjects(userData.projects.length ? userData.projects : [{
@@ -53,7 +53,7 @@ const Project = () => {
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:3000/SignUpData/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
       const userData = response.data;
 
       const updatedUserData = {
@@ -61,7 +61,7 @@ const Project = () => {
         projects: projects,
       };
 
-      await axios.put(`http://localhost:3000/SignUpData/project/${user._id}`, updatedUserData);
+      await axios.put(`https://swiftresume-backend.onrender.com/SignUpData/project/${user._id}`, updatedUserData);
       setSaveSuccess(true);
       setTimeout(() => {
         setSaveSuccess(false);
