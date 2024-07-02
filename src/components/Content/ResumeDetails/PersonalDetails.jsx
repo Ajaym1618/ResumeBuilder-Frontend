@@ -26,7 +26,7 @@ const PersonalDetails = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/SignUpData/${user?._id}`);
+      const res = await axios.get(`https://swiftresume-backend.onrender.com/${user?._id}`);
       const userData = res.data;
       console.log(userData);
       
@@ -73,7 +73,7 @@ const PersonalDetails = () => {
     e.preventDefault();
     try {
       // Fetch the existing user data
-      const response = await axios.get(`http://localhost:3000/SignUpData/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
       const userData = response.data;
       console.log(userData);
   
@@ -84,7 +84,7 @@ const PersonalDetails = () => {
       };
   
       // Send the PUT request with the personal details
-      await axios.put(`http://localhost:3000/SignUpData/personal/${user._id}`, updatePersonalDetails);
+      await axios.put(`https://swiftresume-backend.onrender.com/SignUpData/personal/${user._id}`, updatePersonalDetails);
   
       setSaveSuccess(true); // Set success message state to true
       setTimeout(() => {
