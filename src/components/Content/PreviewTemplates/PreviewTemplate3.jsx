@@ -20,7 +20,7 @@ const PreviewTemplate3 = () => {
   const getData = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/SignUpData/${user._id}`
+        `https://swiftresume-backend.onrender.com/SignUpData/${user._id}`
       );
       setUserInfo(res.data);
       console.log(res.data);
