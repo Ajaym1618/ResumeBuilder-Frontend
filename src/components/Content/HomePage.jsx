@@ -13,7 +13,7 @@ const HomePage = () => {
     <>
       <Header />
       <div className="w-screen h-[85vh] bg-[#100f0f] flex text-white max-[426px]:block">
-        <div className="w-[50%] flex items-center justify-center max-[768px]:w-full max-[376px]:items-start max-[375px]:mb-[40px]">
+        <div className="w-[50%] flex items-center justify-center max-[768px]:w-full max-[376px]:items-center">
           <img
             src={HI}
             alt="Home-Image"
