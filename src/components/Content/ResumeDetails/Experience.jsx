@@ -20,7 +20,7 @@ const Experience = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/SignUpData/${user?._id}`);
+      const res = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
       const userData = res.data;
       if (userData && Array.isArray(userData.experience)) {
         setExperiences(userData.experience.length ? userData.experience : [{
@@ -75,7 +75,7 @@ const Experience = () => {
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:3000/SignUpData/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
       const userData = response.data;
 
       const updatedUserData = {
@@ -83,7 +83,7 @@ const Experience = () => {
         experience: experiences,
       };
 
-      await axios.put(`http://localhost:3000/SignUpData/experience/${user._id}`, updatedUserData);
+      await axios.put(`https://swiftresume-backend.onrender.com/SignUpData/experience/${user._id}`, updatedUserData);
       setSaveSuccess(true); // Set success message state to true
       setTimeout(() => {
         setSaveSuccess(false); // Hide success message after a delay
