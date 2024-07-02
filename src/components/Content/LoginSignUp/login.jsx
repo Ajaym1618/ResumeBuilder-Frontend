@@ -14,7 +14,7 @@ const Login = () => {
   const getData = async () => {
     try {
       await axios
-        .get("http://localhost:3000/signup")
+        .get("https://swiftresume-backend.onrender.com/signup")
         .then((res) => setUserInfo(res.data));
     } catch (error) {
       console.error("Error fetching data", error);
@@ -34,7 +34,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/LoginData",
+        "https://swiftresume-backend.onrender.com/LoginData",
         loginData
       );
       if (response.status === 200) {
