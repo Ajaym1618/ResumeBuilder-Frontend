@@ -19,7 +19,7 @@ const SignUp = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get("https://swiftresume-backend.onrender.com/signup");
+      const res = await axios.get("https://swiftresume-backend.onrender.com/SignUpData");
       setUserInfo(res.data);
     } catch (error) {
       console.error("Error fetching data", error);
@@ -38,7 +38,7 @@ const SignUp = () => {
     }
     try {
       const response = await axios.post(
-        "https://swiftresume-backend.onrender.com/signup",
+        "https://swiftresume-backend.onrender.com/SignUpData",
         signupData
       );
       console.log(response.data);
