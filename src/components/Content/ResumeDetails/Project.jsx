@@ -61,7 +61,7 @@ const Project = () => {
         projects: projects,
       };
 
-      await axios.put(`https://swiftresume-backend.onrender.com/SignUpData/project/${user._id}`, updatedUserData);
+      await axios.put(`https://swiftresume-backend.onrender.com/signup/project/${user._id}`, updatedUserData);
       setSaveSuccess(true);
       setTimeout(() => {
         setSaveSuccess(false);
