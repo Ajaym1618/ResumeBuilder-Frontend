@@ -75,7 +75,7 @@ const Experience = () => {
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user._id}`);
       const userData = response.data;
 
       const updatedUserData = {
