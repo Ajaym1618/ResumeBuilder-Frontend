@@ -26,7 +26,7 @@ const Achievements = () => {
   const getData = async () => {
     try {
       const res = await axios.get(
-        `https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`
+        `https://swiftresume-backend.onrender.com/signup/${user?._id}`
       );
       const userData = res.data;
       if (userData && userData.achievements) {
