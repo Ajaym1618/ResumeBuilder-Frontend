@@ -26,7 +26,7 @@ const PersonalDetails = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user?._id}`);
+      const res = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
       const userData = res.data;
       console.log(userData);
       
@@ -73,7 +73,7 @@ const PersonalDetails = () => {
     e.preventDefault();
     try {
       // Fetch the existing user data
-      const response = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
       const userData = response.data;
       console.log(userData);
   
