@@ -65,7 +65,7 @@ const TemplateView = () => {
         </div>
         <div className="relative w-full px-8 h-[70vh] flex items-center justify-center max-[768px]:h-[60vh] max-[426px]:px-0">
           <div
-            className="h-[60vh] flex gap-5 transition-transform duration-1000 ease-in-out"
+            className="h-[60vh] flex gap-5 transition-transform duration-1000 ease-in-out max-[426px]:h-[100%]"
             style={{
               transform: `translateX(-${(index * 100) / 3}%)`,
               width: `${(templates.length + 3) * 33.33}%`,
