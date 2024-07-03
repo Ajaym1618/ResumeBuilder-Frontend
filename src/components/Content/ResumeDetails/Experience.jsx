@@ -20,7 +20,7 @@ const Experience = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
+      const res = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user?._id}`);
       const userData = res.data;
       if (userData && Array.isArray(userData.experience)) {
         setExperiences(userData.experience.length ? userData.experience : [{
