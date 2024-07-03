@@ -102,7 +102,7 @@ const Login = () => {
         </div>
       )}
       {loginError && (
-        <div className="fixed top-4 right-80 m-4 px-4 py-2 bg-white text-black rounded-md shadow-md">
+        <div className="fixed top-4 right-80 m-4 px-4 py-2 bg-white text-black rounded-md shadow-md max-[768px]:right-4 max-[768px]:top-0 max-[768px]:px-2  max-[768px]:py-2 max-[768px]:text-[12px]">
           <CloseCircleOutlined className="text-red-600 pr-2" />
           {loginError}
         </div>
