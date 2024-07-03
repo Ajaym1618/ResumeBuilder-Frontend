@@ -17,7 +17,7 @@ const Languages = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user?._id}`);
+        const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
         const userData = response.data;
         if (userData && userData.languages) {
           setLanguages({ language: userData.languages });
@@ -74,7 +74,7 @@ const Languages = () => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
       const userData = response.data;
       const updatedUserData = {
         ...userData,
