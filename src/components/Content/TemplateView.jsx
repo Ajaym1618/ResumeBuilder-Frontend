@@ -96,7 +96,7 @@ const TemplateView = () => {
           </div>
         </div>
         <div className="w-[100%] text-white flex justify-center items-center ">
-          <button className="mt-2 px-4 py-4 bg-[#135c4d] rounded-md max-[768px]:mt-4 max-[426px]:py-2" onClick={()=>navigate("/AllTemplate")}>See all templates</button>
+          <button className="mt-2 px-4 py-4 bg-[#135c4d] rounded-md max-[768px]:mt-4 max-[426px]:py-2" onClick={()=>navigate("/AllTemplate",{state:{user})}>See all templates</button>
         </div>
       </div>
       {tempError && (
