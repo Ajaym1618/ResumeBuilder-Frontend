@@ -76,7 +76,7 @@ const PreviewTemplate6 = () => {
   return (
     <>
       <div className="h-[100vh] w-[100%] bg-[#000000bf] flex justify-center items-center relative text-white px-4 max-[426px]:h-auto max-[426px]:px-0">
-        <div class="w-[600px] h-full text-black bg-white download max-[426px]:w-[100%]">
+        <div class="w-[600px] h-[100vh] text-black bg-white download max-[426px]:w-[100%]">
           <div className="w-[100%] bg-[#0d183a] text-white">
             <div className="w-[100%] flex justify-center items-center">
               <div className="w-[70%] pt-2 pl-6">
