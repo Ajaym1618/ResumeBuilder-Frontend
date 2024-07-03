@@ -14,7 +14,7 @@ const Login = () => {
   const getData = async () => {
     try {
       await axios
-        .get("https://swiftresume-backend.onrender.com/signup")
+        .get("https://swiftresume-backend.onrender.com/SignUpData")
         .then((res) => setUserInfo(res.data));
     } catch (error) {
       console.error("Error fetching data", error);
