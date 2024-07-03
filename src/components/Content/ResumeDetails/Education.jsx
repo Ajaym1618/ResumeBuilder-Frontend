@@ -22,7 +22,7 @@ const Education = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
+      const res = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user?._id}`);
       const userData = res.data;
       if (userData && Array.isArray(userData.education)) {
         setEducationList(userData.education);
@@ -79,7 +79,7 @@ const Education = () => {
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user._id}`);
       const userData = response.data;
 
       const updateEducation = {
