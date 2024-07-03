@@ -16,7 +16,7 @@ const Skills = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user?._id}`);
+      const res = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user?._id}`);
       const userData = res.data;
       if (userData && userData.skills) {
         setDetails({ ...details, skills: userData.skills });
@@ -72,7 +72,7 @@ const Skills = () => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`https://swiftresume-backend.onrender.com/signup/${user._id}`);
+      const response = await axios.get(`https://swiftresume-backend.onrender.com/SignUpData/${user._id}`);
       const userData = response.data;
 
       const updateSkills = {
