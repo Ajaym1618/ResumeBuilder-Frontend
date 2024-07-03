@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <div className="w-screen h-[85vh] bg-[#100f0f] flex text-white max-[426px]:block max-[426px]:h-[83vh]">
+      <div className="w-screen h-[85vh] bg-[#100f0f] flex text-white max-[426px]:block max-[426px]:h-[100%]">
         <div className="w-[50%] flex items-center justify-center max-[768px]:w-full max-[376px]:items-start">
           <img
             src={HI}
