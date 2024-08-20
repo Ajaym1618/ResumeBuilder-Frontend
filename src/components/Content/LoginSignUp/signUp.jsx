@@ -113,7 +113,7 @@ const SignUp = () => {
               id="confirmPassword"
               value={signupData.confirmPassword}
               onChange={handleSignupChange}
-              className="py-[8px] px-2 pl-5 border border-[#135c4d] rounded-md text-[14px] mb-2 text-[#135c4d] outline-[#135c4d]"
+              className="w-[100%] py-[8px] px-2 pl-5 border border-[#135c4d] rounded-md text-[14px] mb-2 text-[#135c4d] outline-[#135c4d]"
               placeholder="Confirm your password"
             />
              <span className="absolute top-6 right-3 max-md:top-7">
